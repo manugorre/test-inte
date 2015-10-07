@@ -1,0 +1,112 @@
+.block--content{
+	z-index: 1;
+	.content{
+		text-align: center;
+		background-position: center;
+		background-image: url('../img/background-mobile.jpg');
+		.pin{
+			z-index: 10;
+			position: relative;
+			transform: translateY(16px);
+		}
+		.block--info{
+			background-color: $bg-info-ahead-img;
+			opacity: 0.90;
+			padding: 80px 25px 40px 25px;
+			p{
+				font-size: 13px;
+				&.discover{
+					margin-top: 20px;
+					font-size: 22px;
+				}
+			}
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		.content{
+			min-height: calc(100vh - 114px);
+			background-image: url('../img/background-desktop.jpg');
+			text-align: inherit;
+			background-position: right;
+			background-repeat: no-repeat;
+    	background-size: cover;
+			content: '';
+	    position: absolute;
+	    z-index: -1;
+	    height: 100%;
+	    top: 0;
+	    right: 0;
+			.block--pin{
+				width: 55%;
+				height: 100%;
+				display: inline-block;
+				text-align: center;
+	    	vertical-align: top;
+				img{
+					transform: translateY(70px);
+					max-width: 95%;
+				}
+			}
+			.block--info{
+				width: 45%;
+				height: 100%;
+				vertical-align: top;
+	    	display: inline-block;
+				background-color: transparent;
+				padding: 30px 17px;
+				&:before, &:after{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					width: 45%;
+			    height: 100%;
+			    top: 0;
+			    right: 0;
+				}
+				&:after{
+					background-color: white;
+					opacity: 0.9;
+				}
+				&:before{
+					background-position: right;
+			    background-image: url("../img/background-desktop.jpg");
+					filter: grayscale(100%);
+					background-repeat: no-repeat;
+    			background-size: cover;
+				}
+				p{
+					text-align: center;
+					font-style: italic;
+					color: $color-info-ahead-img;
+					&.arrow{
+						position: relative;
+						&:after{
+							content: '';
+							display: block;
+							position: absolute;
+							top: 50%;
+							right: -31px;
+							margin-top: -10px;
+							z-index: 99999;
+							opacity: 0.9;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 14px 0 14px 14px;
+							border-color: transparent transparent transparent #f4f4f4;
+						}
+					}
+					&.arrow{
+						font-size: 17px;
+					}
+					&.discover{
+						font-size: 26px;
+						top: 50%;
+						position: relative;
+						margin-top: -150px;
+					}
+				}
+			}
+		}
+	}
+}

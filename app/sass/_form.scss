@@ -1,0 +1,164 @@
+.block--form{
+	z-index: 0;
+	form{
+		text-align: center;
+		padding: 40px 20px 18px 20px;
+		margin-bottom: 2px;
+		font-size: 13px;
+		background-color: $bg-form;
+		min-height: calc(100vh - 114px);
+		input{
+			display: block;
+			margin: 11px auto 20px auto;
+			border: none;
+			border-radius: 50px;
+			padding: 5px 10px;
+		}
+		label, input{
+			display: inline-block;
+			font-weight: normal;
+		}
+		.block--radio{
+			ul{
+				margin: 10px 0 20px 0;
+				li{
+					display: inline-block;
+					input{
+						margin-right: 8px;
+						appearance: none;
+						width: 13px;
+						height: 13px;
+						background-color: white;
+						vertical-align: initial;
+						margin-top: 2px;
+						padding: 0;
+						&:checked {
+	  					background-color: rgba(59, 102, 251, 1);
+						}
+					}
+					label{
+						float: right;
+					}
+					&:nth-child(n+2){
+						margin-left: 18px;
+					}
+				}
+			}
+			&.civility{
+				> ul{
+					float: right;
+					margin-top: 0;
+				}
+			}
+		}
+		.block--inputList{
+			max-width: 320px;
+    	margin: 0 auto 20px auto;
+			label{
+				display: block;
+				width: 90px;
+				float: left;
+				text-align: right;
+			}
+			label, input{
+				margin: 0;
+			}
+			input{
+				width: 50%;
+			}
+			li{
+				margin-bottom: 12px;
+			}
+			.labell{
+				text-align: right;
+    		float: left;
+    		width: 100px;
+			}
+			.block--radio{
+				width: 50%;
+				display: inline-block;
+				float: inherit;
+				ul{
+					text-align: left;
+					margin-bottom: 0;
+					li{
+						margin: 0 6px;
+						label{
+							width: inherit;
+						}
+					}
+				}
+			}
+		}
+		.submit{
+			margin: 37px auto;
+			padding: 17px 57px;
+	    border-radius: 100px;
+	    border: none;
+			background-color: $btn-submit;
+			color: white;
+	    font-size: 17px;
+			display: block;
+		}
+		.mention{
+			color: black;
+			text-decoration: underline;
+			display: block;
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		form{
+			padding: 40px 40px 18px 40px;
+			.block--radio{
+				ul{
+					li{
+						input{
+							width: 20px;
+							height: 20px;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			& > .block--radio{
+				text-align: left;
+				ul{
+					text-align: center;
+					li{
+						input{
+							width: 20px;
+							height: 20px;
+							margin-bottom: 0;
+						}
+						&:nth-child(n+2){
+							margin-left: 12px;
+						}
+					}
+				}
+				&.civility{
+					text-align: center;
+				}
+				&:not(.civility){
+					font-style: italic;
+				}
+			}
+			.block--inputList{
+				ul{
+					margin-top: 0;
+				}
+				.block--radio{
+					ul{
+						margin-bottom: 8px;
+					}
+				}
+			}
+			.submit{
+				margin: 67px auto 40px auto;
+				font-style: italic;
+			}
+			.mention{
+				font-style: italic;
+			}
+		}
+	}
+}

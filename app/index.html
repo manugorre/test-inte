@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr"><![endif]-->
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="fr"> <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <title>nexity</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a href="/" class="logo" ><img src="img/logo.png" alt="Nexity"></a>
+        <h1 class="title">Une belle vie immobili&egrave;re</h1>
+      </header>
+      <div class="row no-gutters row-eq-height">
+        <div class="col-xs-12 col-sm-7 col-md-8 block--content">
+          <div class="content">
+            <div class="block--pin">
+              <img src="img/pin.png" alt="Les clefs de votre financement se trouvent ici" class="pin">
+            </div>
+            <div class="block--info">
+              <p class="arrow">
+                Remplissez notre formulaire en ligne pour b&eacute;n&eacute;ficier de l’offre
+              </p>
+              <p class="discover">
+                D&eacute;couvrez les programmes correspondant à votre projet d’achat dans le neuf
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 block--form">
+          <form action="getform.php" method="get" class="form">
+            <ul class="reset--list block--inputList">
+              <li class="clearfix">
+                <p class="labell">Civilit&eacute;*</p>
+                <div class="block--radio civility clearfix">
+                  <ul class="reset--list">
+                    <li><input type="radio" name="civility" value="mlle" required id="mlle"><label for="mlle">Mlle</label></li>
+                    <li><input type="radio" name="civility" value="mme" required id="mme"><label for="mme">Mme</label></li>
+                    <li><input type="radio" name="civility" value="m" required id="m"><label for="m">M.</label></li>
+                  </ul>
+                </div>
+              </li>
+              <li><label>Nom*</label><input type="text" name="last_name" required /></li>
+              <li><label>Pr&eacute;nom*</label><input type="text" name="first_name" required /></li>
+              <li><label>Code postal*</label><input type="text" name="zip_code" required /></li>
+              <li><label>E-mail*</label><input type="email" name="mail" required /></li>
+              <li><label>T&eacute;l&eacute;phone*</label><input type="tel" name="phone" required /></li>
+            </ul>
+            <div class="block--radio">
+              Souhaitez-vous recevoir l'actualit&eacute; immobili&egrave;re et les offres personnalis&eacute;es de Nexity ?
+              <ul class="reset--list">
+                <li><input type="radio" name="news" value="y" required id="yes_news"><label for="yes_news">Oui</label></li>
+                <li><input type="radio" name="news" value="n" required id="n_news"><label for="n_news">Non.</label></li>
+              </ul>
+            </div>
+            <div class="block--radio">
+              Souhaitez-vous recevoir les offres de nos partenaires ?
+              <ul class="reset--list">
+                <li><input type="radio" name="offers" value="y" required id="yes_offers"><label for="yes_offers">Oui</label></li>
+                <li><input type="radio" name="offers" value="n" required id="n_offers"><label for="n_offers">Non.</label></li>
+              </ul>
+            </div>
+            <input type="submit" class="submit" value="Valider">
+            <a href="#" class="mention">Mentions l&eacute;gales</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

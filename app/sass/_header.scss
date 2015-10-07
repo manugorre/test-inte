@@ -1,0 +1,33 @@
+.header{
+	padding: 26px 0;
+	.logo{
+	  display: inline-block;
+		margin: 0 9px 0 30px;
+		img{
+			width: 61px;
+		}
+	}
+	.title{
+		color: $color-header-title;
+		font-size: 17px;
+		margin: 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+	.header{
+		padding: 21px 0;
+		.logo{
+			margin: 0 13px 0 25px;
+			img{
+				width: 72px;
+			}
+		}
+		.title{
+			font-size: 20px;
+		}
+	}
+}
